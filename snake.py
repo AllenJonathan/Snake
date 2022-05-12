@@ -7,9 +7,14 @@ class Snake:
 
     def __init__(self):
         self.snake = LinkedList()
-        self.head = Head()
+        self.game_over = False
+        self.create_snake()
 
+    def create_snake(self):
+        self.head = Head()
         self.snake.prepend(self.head)
+        for i in range(3):
+            self.add_body_node()
 
     def add_body_node(self):
         body = Body()
@@ -20,6 +25,13 @@ class Snake:
         while current.next:
             next = current.next
             current.value.rect = next.value.rect
+            current = current.next
+
+    def check_game_over(self):
+        current = self.snake.head
+        while current.next:
+            if current.value.rect == self.head.rect:
+                self.game_over = True
             current = current.next
 
     def draw_body(self, screen):
