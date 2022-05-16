@@ -10,10 +10,10 @@ class Body:
         self.x = x
         self.y = y
 
-        self.body_colour = self.settings.snake_colour
         self.rect = pygame.Rect(
             (self.x, self.y, self.settings.snake_size, self.settings.snake_size)
         )
+        self.in_rect = pygame.Rect(self.rect.x, self.rect.y, self.settings.snake_size - 2, self.settings.snake_size - 2)
 
 class Head(Body):
 
@@ -24,13 +24,11 @@ class Head(Body):
 
 
     def change_direction(self):
-        print(self.change_to, self.direction)
         if self.change_to == 'up' and self.direction != 'down':
             self.direction = 'up'
         if self.change_to == 'down' and self.direction != 'up':
             self.direction = 'down'
         if self.change_to == 'left' and self.direction != 'right':
-            print(self.change_to == 'left', self.direction != 'right')
             self.direction = 'left'
         if self.change_to == 'right' and self.direction != 'left':
             self.direction = 'right'
@@ -61,9 +59,11 @@ class Head(Body):
         self.rect = pygame.Rect(
             (self.x, self.y, self.settings.snake_size, self.settings.snake_size)
         )
+        self.in_rect.center = self.rect.center
 
     def draw_snake_head(self, screen):
         self.change_direction()
         self.update_head()
-        pygame.draw.rect(screen, self.body_colour, self.rect)
+        pygame.draw.rect(screen, self.settings.snake_border_colour, self.rect)
+        pygame.draw.rect(screen, self.settings.snake_colour, self.in_rect, border_radius=5)
         pygame.draw.circle(screen, self.settings.snake_eye_colour, self.rect.center, self.settings.snake_eye_size)
