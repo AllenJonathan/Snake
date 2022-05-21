@@ -34,7 +34,6 @@ class Head(Body):
             self.direction = 'right'
 
     def update_head(self):
-        # print(self.rect)
         if self.direction == 'up':
             if self.rect.top > 0:
                 self.y -= self.settings.snake_size

@@ -20,7 +20,9 @@ class Food:
             )
 
     def draw_food(self, screen):
-        pygame.draw.circle(screen, self.settings.food_colour, (self.x,self.y) , self.settings.snake_size//2)
+        pygame.draw.circle(
+            screen, self.food_colour, (self.x,self.y) , self.settings.snake_size//2 - self.settings.snake_size*0.08
+            )
 
 
 class GoldenFood(Food):
@@ -28,3 +30,9 @@ class GoldenFood(Food):
     def __init__(self):
         super().__init__()
         self.food_colour = self.settings.golden_food_color
+
+
+food_1 = Food()
+food_2 = GoldenFood()
+
+print(food_2.__class__ == GoldenFood)

@@ -3,8 +3,8 @@ class Settings:
     def __init__(self):
 
         # screen
-        self.screen_width = 720
-        self.screen_height = 480
+        self.screen_width = 1920
+        self.screen_height = 1080
         self.bg_colour = (169,204,102)
 
         # FPS
@@ -24,14 +24,14 @@ class Settings:
         self.golden_food_prob = 2 # lesser the more chances
 
         # score
-        self.score_font = 'ariel'
-        self.score_size = 40
+        self.score_font = 'calibri'
+        self.score_size = 30
         self.score_colour = (250,250,255)
         self.score_padding = 20
         self.score_incement = 50
         self.gold_multiplier = 3
 
         # game over
-        self.game_over_font = 'ariel'
+        self.game_over_font = 'times new roman'
         self.game_over_size = 60
         self.game_over_colour = (0,0,0)

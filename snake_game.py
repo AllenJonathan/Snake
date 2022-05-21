@@ -30,7 +30,6 @@ class SnakeGame:
 
     def rungame(self):
         while True:
-            print((self.food.x, self.food.y), self.snake.head.rect.center)
             events.check_events(self.snake)
             self.check_food_eat()
             self.update_screen()
@@ -52,9 +51,9 @@ class SnakeGame:
 
     def check_food_eat(self):
         if self.snake.head.rect.center == (self.food.x, self.food.y):
-            if isinstance(self.food, Food):
+            if self.food.__class__ == Food:
                 self.score.increment_score(self.settings.score_incement)
-            elif isinstance(self.food, GoldenFood):
+            elif self.food.__class__ == GoldenFood:
                 self.score.increment_score(self.settings.score_incement * self.settings.gold_multiplier)
             del self.food
             self.add_food()
@@ -67,7 +66,6 @@ class SnakeGame:
             self.food = Food()
         else:
             self.food = GoldenFood()
-            self.score.increment_score(self.settings.score_incement * self.settings.gold_multiplier)
 
     def increase_game_speed(self):
         if self.settings.FPS < 60:
