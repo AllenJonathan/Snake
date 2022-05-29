@@ -21,7 +21,7 @@ class Settings:
         # food
         self.food_colour = (175,0,0)
         self.golden_food_color = (250,250,0)
-        self.golden_food_prob = 2 # lesser the more chances
+        self.golden_food_prob = 10 # lesser the more chances
 
         # score
         self.score_font = 'calibri'
