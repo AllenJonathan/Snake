@@ -35,3 +35,10 @@ class Settings:
         self.game_over_font = 'times new roman'
         self.game_over_size = 60
         self.game_over_colour = (0,0,0)
+
+        # main menu
+        self.main_menu_font = 'calibri'
+        self.main_menu_font_size = 70
+        self.main_menu_font_colour = (255,255,255)
+        self.main_menu_title_font_size = 150
+        self.main_menu_select_colour = (0,0,0)

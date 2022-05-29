@@ -34,7 +34,8 @@ class SnakeGame:
             self.check_food_eat()
             self.update_screen()
             self.increase_game_speed()
-            self.check_game_over()
+            if self.check_game_over():
+                break
             self.main_clock.tick(self.settings.FPS)
 
     def update_screen(self):
@@ -74,7 +75,9 @@ class SnakeGame:
     def check_game_over(self):
         self.snake.check_game_over()
         if self.snake.game_over:
-            return self.game_over()
+            self.game_over()
+            time.sleep(5)
+            return True
 
     def game_over(self):
         my_font = pygame.font.SysFont(self.settings.game_over_font, self.settings.game_over_size)
@@ -88,11 +91,8 @@ class SnakeGame:
 
         self.update_high_score()
 
-        time.sleep(5)
-        pygame.quit()
-        quit()
 
     def update_high_score(self):
         if self.score.score > self.info.high_score:
-            with open('other_files/high_score.txt', 'w') as f:
+            with open('other_files\high_score.txt', 'w') as f:
                 f.write(str(self.score.score))
