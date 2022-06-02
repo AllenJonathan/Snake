@@ -15,7 +15,7 @@ class SnakeGame:
     def __init__(self):
 
         pygame.init()
-        self.settings = Settings()
+        self.settings = Settings
         self.main_clock = pygame.time.Clock()
 
         self.screen = pygame.display.set_mode(

@@ -7,7 +7,7 @@ class Food:
 
     def __init__(self):
 
-        self.settings = Settings()
+        self.settings = Settings
         self.food_colour = self.settings.food_colour
 
         self.snake_size = self.settings.snake_size

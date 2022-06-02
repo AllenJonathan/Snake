@@ -2,6 +2,8 @@ import pygame
 import sys
 from snake_game import SnakeGame
 from settings import Settings
+from settings_screen import SettingsScreen
+import events as ev
 
 
 class MainMenu:
@@ -9,7 +11,7 @@ class MainMenu:
     def __init__(self):
 
         pygame.init()
-        self.settings = Settings()
+        self.settings = Settings
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width,self.settings.screen_height)
         )
@@ -71,31 +73,24 @@ class MainMenu:
         self.screen.blit(quit_surface, quit_rect)
 
     def check_events(self):
-        for event in pygame.event.get():
-            if event == pygame.QUIT:
-                sys.exit()
-            elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RETURN:
-                    if self.current == 0:
-                        self.play_game()
-                    elif self.current == 1:
-                        pass
-                    elif self.current == 2:
-                        pygame.quit()
-                        sys.exit()
-                elif event.key == pygame.K_q:
-                    sys.exit()
-                elif event.key == pygame.K_UP:
-                    if self.current != 0:
-                        self.current -= 1
-                elif event.key == pygame.K_DOWN:
-                    if self.current != 2:
-                        self.current += 1
+        events = ev.check_events_main_menu(self.current)
+        if events:
+            selected, self.current = events
+            if selected == 1:
+                self.play_game()
+            elif selected == 2:
+                self.settings_screen()
+            elif selected == 3:
+                pygame.quit()
+                sys.quit()
 
     def play_game(self):
         game = SnakeGame()
         game.rungame()
 
+    def settings_screen(self):
+        settings_screen = SettingsScreen()
+        settings_screen.render_screen()
 
 
 main_menu = MainMenu()

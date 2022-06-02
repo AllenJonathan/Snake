@@ -5,7 +5,7 @@ from settings import Settings
 class Info:
 
     def __init__(self, snake):
-        self.settings = Settings()
+        self.settings = Settings
         self.snake = snake
         self.snake_length = 0
         self.high_score = 0

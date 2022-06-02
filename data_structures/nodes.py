@@ -5,7 +5,7 @@ from settings import Settings
 class Body:
 
     def __init__(self, x=0, y=0):
-        self.settings = Settings()
+        self.settings = Settings
 
         self.x = x
         self.y = y

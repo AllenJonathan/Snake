@@ -8,7 +8,7 @@ from data_structures.nodes import Head, Body
 class Snake:
 
     def __init__(self):
-        self.settings = Settings()
+        self.settings = Settings
 
         self.snake = LinkedList()
         self.game_over = False

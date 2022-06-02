@@ -4,7 +4,7 @@ from settings import Settings
 class Score:
 
     def __init__(self):
-        self.settings = Settings()
+        self.settings = Settings
         self.score = 0
 
     def increment_score(self, value):
