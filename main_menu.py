@@ -82,7 +82,7 @@ class MainMenu:
                 self.settings_screen()
             elif selected == 3:
                 pygame.quit()
-                sys.quit()
+                sys.exit()
 
     def play_game(self):
         game = SnakeGame()
