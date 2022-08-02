@@ -16,6 +16,10 @@ Fork this repository and use:
 - `pip install pygame`
 - `python main_menu.py` in the project directory
 
+<br>
+#### Screenshot
+<br>
+
 <p align="center">
-  <img src="README images/image.png" title="hover text">
+  <img src="README images/image.png" title="Snake Game">
 </p>
