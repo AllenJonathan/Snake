@@ -16,4 +16,6 @@ Fork this repository and use:
 - `pip install pygame`
 - `python main_menu.py` in the project directory
 
-![screenshot](README images/image.png)
+<p align="center">
+  <img src="README images/image.png" width="350" title="hover text">
+</p>
