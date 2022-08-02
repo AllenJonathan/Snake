@@ -2,15 +2,16 @@
 
 Snake game build using pygame.
 
-To play this game on your device enter the following commands on your terminal. 
-Note: You should have python and pip installed already on your device.
+To play this game on your device enter the following commands on your terminal. <br>
+###### <i> Note: You should have python and pip installed already on your device. </i>
 
 #### Without git installed
 - Download the code and extract its contents.
 - run `pip install pygame` in terminal
 - run `python snake.py` in the project directory
 
-If you have git installed, fork this repository and use
+#### With git installed
+Fork this repository and use:
 - `git clone https://github.com/YourGithubUsername/Snake.git`
 - `pip install pygame`
 - `python snake.py` in the project directory
