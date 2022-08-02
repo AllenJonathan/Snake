@@ -17,9 +17,8 @@ Fork this repository and use:
 - `python main_menu.py` in the project directory
 
 <br>
-#### Screenshot
-<br>
 
 <p align="center">
   <img src="README images/image.png" title="Snake Game">
 </p>
+
