@@ -17,5 +17,5 @@ Fork this repository and use:
 - `python main_menu.py` in the project directory
 
 <p align="center">
-  <img src="README images/image.png" width="350" title="hover text">
+  <img src="README images/image.png" title="hover text">
 </p>
