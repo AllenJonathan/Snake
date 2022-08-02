@@ -6,7 +6,7 @@ To play this game on your device enter the following commands on your terminal.
 Note: You should have python and pip installed already on your device.
 
 #### Without git installed
-- Download the code and unzip the file.
+- Download the code and extract its contents.
 - run `pip install pygame` in terminal
 - run `python snake.py` in the project directory
 
