@@ -16,3 +16,4 @@ Fork this repository and use:
 - `pip install pygame`
 - `python main_menu.py` in the project directory
 
+![screenshot](README images/image.png)
