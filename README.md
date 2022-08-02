@@ -8,11 +8,11 @@ To play this game on your device enter the following commands on your terminal. 
 #### Without git installed
 - Download the code and extract its contents.
 - run `pip install pygame` in terminal
-- run `python snake.py` in the project directory
+- run `python main_menu.py` in the project directory
 
 #### With git installed
 Fork this repository and use:
 - `git clone https://github.com/YourGithubUsername/Snake.git`
 - `pip install pygame`
-- `python snake.py` in the project directory
+- `python main_menu.py` in the project directory
 
