@@ -3,7 +3,7 @@
 Snake game build using pygame.
 
 To play this game on your device enter the following commands on your terminal. <br>
-###### <i> Note: You should have python and pip installed already on your device. </i>
+###### <i> Note: You should have python and pip installed already on your os. </i>
 
 #### Without git installed
 - Download the code and extract its contents.
