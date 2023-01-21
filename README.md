@@ -6,7 +6,7 @@ To play this game on your device enter the following commands on your terminal. 
 ###### <i> Note: You should have python and pip installed already on your OS. </i>
 
 #### Without git installed
-- Download the code and extract its contents.
+- Download ZIP file of the code and extract its contents.
 - run `pip install pygame` in terminal
 - run `python main_menu.py` in the project directory
 
